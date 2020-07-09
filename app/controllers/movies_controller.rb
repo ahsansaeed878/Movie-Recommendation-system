@@ -30,7 +30,6 @@ class MoviesController < ApplicationController
 
   # /movies/:id
   def destroy
-    binding.pry
     @movie = Movie.find_by(id: params[:id]) if params[:id].present?
     if @movie.present?
       @movie.destroy
